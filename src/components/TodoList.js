@@ -2,6 +2,8 @@ import React from "react";
 import { StyleSheet, Text, View, ScrollView } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
 
+
+
 export default function TodoList(props) {
   return (
     <View style={styles.listTile}>
@@ -9,15 +11,18 @@ export default function TodoList(props) {
         name={props.todo.isChecked ? "check-circle" : "radio-button-unchecked"}
         style={styles.leading}
         size={20}
-        color="#4281a4"
+        color="#eb5e28"
         onPress={() => props.checkTodo(props.todo.key)}
       />
-      <Text style={styles.title}>{props.todo.name}</Text>
+      <Text style={styles.title} style = {{textDecorationLine : props.todo.isChecked ? "line-through" : "none", width: "90%", fontSize: 18}} >
+        {props.todo.name}
+         
+        </Text>
       <Icon
         name="delete"
         style={styles.trailing}
         size={20}
-        color="#4281a4"
+        color="#eb5e28"
         onPress={() => props.deleteTodo(props.todo.key)}
       />
     </View>
@@ -31,10 +36,10 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
-    backgroundColor: "#f6f5f3",
+    backgroundColor: "#fafafa",
     padding: 10,
     borderBottomWidth: 0.5,
-    borderBottomColor: "#4281a4",
+    borderBottomColor: "#eb5e28",
     marginBottom: "15px"
   },
   leading: {

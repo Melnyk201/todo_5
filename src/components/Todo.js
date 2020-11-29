@@ -14,8 +14,9 @@ export default function Todo(props) {
         style={styles.textbox} />
       <Button 
         title="Add" 
-        color="#4281a4"
+        style={styles.buttonToDo}
         onPress={props.addTodo}
+        
       />
     </View>
   );
@@ -26,7 +27,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     width: "100%",
     justifyContent:'center',
-    alignItems:'center'
+    alignItems:'center',
+    
   },
   textbox: {
     borderWidth: 2,
@@ -34,6 +36,13 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     padding: 10,
     margin: 10,
-    width:'80%'
+    width:'80%',
+    textTransform: "uppercase"
+  },
+  buttonToDo:
+  {
+     backgroundColor:"#eb5e28",
+     textTransform:"uppercase",
+    
   }
 });

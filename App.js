@@ -44,7 +44,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <View style={styles.statusBar}></View>
+     
       <AppBar />
       <View style={styles.todo}>
         <TextInput
@@ -53,7 +53,7 @@ export default function App() {
           onChangeText={value => setTitle(value)}
           style={styles.textbox}
         />
-        <Button title="Add" color="#4281a4" onPress={() => addTodo()} />
+        <Button title="Add" onPress={() => addTodo()} style={styles.buttonToDo} color = "#eb5e28" />
       </View>
      
       <View style={styles.mytext}>
@@ -75,12 +75,6 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  statusBar: {
-    backgroundColor: "#4281a4",
-    color: "#fff",
-    width: "100%",
-    height: 30
-  },
   container: {
     flex: 1,
     backgroundColor: "#fff",
@@ -89,13 +83,14 @@ const styles = StyleSheet.create({
   },
   todo: {
     flexDirection: "row",
-    width: "100%",
+    width: "80%",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    
   },
   textbox: {
-    borderWidth: 1,
-    borderColor: "#4281a4",
+    borderWidth: 2,
+    borderColor: "#eb5e28",
     borderRadius: 8,
     padding: 10,
     margin: 10,
@@ -105,5 +100,11 @@ const styles = StyleSheet.create({
   {
     marginBottom: "40px",
     fontSize: "30px"
+  },
+  buttonToDo:
+  {
+     backgroundColor:"#eb5e28",
+     textTransform:"uppercase",
+     
   }
 });

@@ -11,16 +11,16 @@ export default function AppBar(){
 
 const styles = StyleSheet.create({
   appBar: {
-    backgroundColor: "#4281a4",
-    color: "white",
+    //backgroundColor: "#4281a4",
     width: "100%",
     height: 100,
     justifyContent: "center",
     alignItems: "center"
   },
   heading: {
-    color: "white",
-    fontSize: 24,
-    fontWeight: "400"
+    color: "#eb5e28",
+    fontSize: 30,
+    fontWeight: "600",
+    textTransform: "uppercase"
   }
 });
